@@ -1,7 +1,7 @@
 package frans.traficLight;
 
+import enviroment.Color;
 import enviroment.Crossing;
-import junit.framework.Assert;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -38,6 +38,7 @@ public class AppTest
     	Crossing crossing = new Crossing();
     	TraficLight traficLight = new TraficLight(crossing);
     	//TODO add test
+ 
     	crossing.getEastSensor().setCarDetected(false);
     	crossing.getWestSensor().setCarDetected(false);
     	crossing.getNorthSensor().setCarDetected(false);
@@ -45,22 +46,18 @@ public class AppTest
     	
         traficLight.Execute();
         
-    	assertFalse(crossing.getEastLight().isGreen());
-    	assertFalse(crossing.getEastLight().isYellow());
-    	assertFalse(crossing.getEastLight().isRed());
+    	assertTrue(crossing.getEastLight().isRed());
+    	assertTrue(crossing.getNorthLight().isRed());
+    	assertTrue(crossing.getSouthLight().isRed());
+    	assertTrue(crossing.getWestLight().isRed());
     	
-    	assertFalse(crossing.getNorthLight().isGreen());
-    	assertFalse(crossing.getNorthLight().isYellow());
-    	assertFalse(crossing.getNorthLight().isRed());
+    	crossing.getEastSensor().setCarDetected(true);
+    	traficLight.Execute();    	
     	
-    	assertFalse(crossing.getSouthLight().isGreen());
-    	assertFalse(crossing.getSouthLight().isYellow());
-    	assertFalse(crossing.getSouthLight().isRed());
+    	assertTrue(crossing.getEastLight().getColor() == Color.GREEN);
+    	assertTrue(crossing.getNorthLight().getColor() == Color.RED);
+    	assertTrue(crossing.getSouthLight().getColor() == Color.RED);
     	
-    	assertFalse(crossing.getWestLight().isGreen());
-    	assertFalse(crossing.getWestLight().isYellow());
-    	assertFalse(crossing.getWestLight().isRed());
-    	
-    	
+   
     }
 }

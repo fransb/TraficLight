@@ -2,33 +2,35 @@ package enviroment;
 
 public class Light {
 	
-	boolean red = false;
-	boolean yellow = false;
-	boolean green = false;
+	private Color color = Color.RED;
 	
-	public void setRed(boolean red){
-		this.red = red; 
-	}
-	
-	public void setYellow(boolean yellow){
-		this.yellow = yellow;
+	public void setRed(){
+		color = Color.RED;
+		}
+		
+	public void setGreen(){
+		color = Color.GREEN;
 	}
 	
-	public void setGreen(boolean green){
-		this.green = green;
-	}
-
-	public boolean isRed() {
-		return red;
-	}
-
-	public boolean isYellow() {
-		return yellow;
+	public Color getColor() {
+		return color;
 	}
 
 	public boolean isGreen() {
-		return green;
+		if (color == Color.GREEN) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
+	public boolean isRed() {
+		if (color == Color.RED) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
 }
 

@@ -19,6 +19,6 @@ public class Sensor {
 	public void setValid(boolean valid) {
 		this.valid = valid;
 	}
-	
+
 	
 }

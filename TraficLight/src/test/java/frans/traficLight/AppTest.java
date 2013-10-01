@@ -58,6 +58,6 @@ public class AppTest
     	assertTrue(crossing.getNorthLight().getColor() == Color.RED);
     	assertTrue(crossing.getSouthLight().getColor() == Color.RED);
     	
-    	crossing.getEastSensor().setValidity(false);
+    	crossing.getEastSensor().setValid(false);
     }
 }

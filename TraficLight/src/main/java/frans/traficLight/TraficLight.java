@@ -18,15 +18,15 @@ public class TraficLight {
 			crossing.getWestLight().setGreen();
 			crossing.getNorthLight().setRed();
 			crossing.getSouthLight().setRed();
-			countdown++;
+			countDown++;
 		} else if ((crossing.getNorthSensor().isCarDetected()) || (crossing.getSouthSensor().isCarDetected())){
 			crossing.getEastLight().setRed();
 			crossing.getWestLight().setRed();
 			crossing.getNorthLight().setGreen();
 			crossing.getSouthLight().setGreen();
-			countdown++;
-		} else if (countdown >= 3) {
-			countdown = 0;
+			countDown++;
+		} else if (countDown >= 3) {
+			countDown = 0;
 		} else {
 			crossing.getEastLight().setRed();
 			crossing.getWestLight().setRed();

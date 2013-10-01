@@ -1,5 +1,5 @@
 package enviroment;
 
 public enum Color {
-	RED, GREEN
+	RED, GREEN, BLINKINGYELLOW
 }

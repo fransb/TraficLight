@@ -12,12 +12,24 @@ public class Light {
 		color = Color.GREEN;
 	}
 	
+	public void setYellowBlinking(){
+		color = Color.BLINKINGYELLOW;
+	}
+	
 	public Color getColor() {
 		return color;
 	}
 
 	public boolean isGreen() {
 		if (color == Color.GREEN) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	public boolean isBlinkingYellow() {
+		if (color == Color.BLINKINGYELLOW) {
 			return true;
 		} else {
 			return false;

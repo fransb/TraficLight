@@ -2,7 +2,7 @@ package enviroment;
 
 public class Sensor {
 	boolean carDetected = false;
-	boolean valid = true;
+	boolean validity = true;
 
 	public boolean isCarDetected() {
 		return carDetected;
@@ -12,12 +12,9 @@ public class Sensor {
 		this.carDetected = carDetected;
 	}
 
-	public boolean isValid() {
-		return valid;
-	}
-
-	public void setValid(boolean valid) {
-		this.valid = valid;
+	public void setValidity(boolean b) {
+		this.validity = b;
+		
 	}
 	
 	

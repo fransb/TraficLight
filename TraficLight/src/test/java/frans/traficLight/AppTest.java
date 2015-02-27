@@ -1,10 +1,12 @@
+//please ignore,I'm a new user of Github~
+
 package frans.traficLight;
 
-import enviroment.Color;
-import enviroment.Crossing;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import enviroment.Color;
+import enviroment.Crossing;
 
 /**
  * Unit test for simple App.
